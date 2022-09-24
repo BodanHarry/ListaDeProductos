@@ -1,3 +1,4 @@
+#Harry
 from Clases import Producto as prod, ListaProd as lst
 
 listaProd = lst()
@@ -70,7 +71,7 @@ def buscarPorNombre():
     try:
         producto, pos = listaProd.buscarPorNombre(nombre)
  
-        if producto.Codigo != None:
+        if producto.Nombre != None:
             print(producto)
     except Exception as ex:
         print("Error al buscar código", str(ex))
@@ -81,14 +82,13 @@ def buscarPorPrecio():
     try:
         producto, pos = listaProd.buscarPorPrecio(precio)
  
-        if producto.Codigo != None:
+        if producto.precio != None:
             print(producto)
     except Exception as ex:
         print("Error al buscar código", str(ex))
 
-
 def  mostrarExistenciaMenorAMinimo():
-    listaProd.mostrarExistenciaMenorAMinimo();
+    listaProd.mostrarExistenciaMenorAMinimo()
         
 def mostrarProductos():
     for producto in listaProd.lista:
