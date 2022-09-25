@@ -22,8 +22,8 @@ def agregarProducto():
     nombre = input("Nombre: ")
     descripcion = input("Descripción: ")
     precio = input("Precio: ")
-    existencia = input("Existencia: ")
-    existenciaMinima = input("Existencia mínima: ")
+    existencia = int(input("Existencia: "))
+    existenciaMinima = int(input("Existencia mínima: "))
     producto = prod(codigo, nombre, descripcion, precio, existencia, existenciaMinima)
     print(producto)
     listaProd.agregarProducto(producto)
@@ -38,8 +38,8 @@ def modificarProducto():
     nuevoNombre = input("Nombre: ")
     nuevaDescripcion = input("Descripcion: ")
     nuevoPrecio = input("Precio: ")
-    nuevaExistencia = input("Existencia: ")
-    nuevaExistenciaMinima = input("Existencia Mínima: ")
+    nuevaExistencia = int(input("Existencia: "))
+    nuevaExistenciaMinima = int(input("Existencia Mínima: "))
     nuevoProducto = prod(cod, nuevoNombre, nuevaDescripcion, nuevoPrecio, nuevaExistencia, nuevaExistenciaMinima)
     listaProd.editarProducto(nuevoProducto, posV)
 
@@ -98,7 +98,7 @@ def mostrarProductos():
 
 def main():
     op = 0
-    while(op!=10):
+    while(op!=9):
         op = menu()
         if op == 1: agregarProducto()
         elif op == 2: modificarProducto()

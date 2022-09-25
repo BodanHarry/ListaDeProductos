@@ -1,3 +1,4 @@
+#Harry
 class Producto:
 
     def __init__(self, cod, nom, des, pre, exi, exiMin):
